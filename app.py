@@ -1,9 +1,6 @@
 # this is a comment
 # TODO built this function
 
-from unittest import result
-
-
 def add(num, num2):
     '''
     this is suppose to add 2 numbers
@@ -219,7 +216,31 @@ students = [
     { 
         "name": "Zack",
         "city": "Los Angeles"
-    }
+    },
+     { 
+        "name": "John",
+        "city": "Atlanta"
+    },
+    { 
+        "name": "Jane",
+        "city": "New York"
+    },
+    { 
+        "name": "Rob",
+        "city": "Los Angeles"
+    },
+     { 
+        "name": "Harper",
+        "city": "Washington"
+    },
+    { 
+        "name": "Mike",
+        "city": "Seattle"
+    },
+    { 
+        "name": "Set",
+        "city": "San Francisco"
+    },
 ]
 
 for i in range(len(students)):
@@ -306,3 +327,32 @@ def get_names(students):
     return names
 
 print('name list: ', get_names(students))
+
+def parse_by_city(students):
+    # TODO Make a empty dict
+    # TODO Iterate through the list of students and perform logic
+        # if the city is not in dict
+            # add the city and set that to a empty list
+        # logic => if the city is in the dict
+            # append student name to list
+    # TODO return the dict
+
+    result = {}
+    for student in students:
+        print('inside', student)
+        if student.get('city'):
+            if not result.get(student.get('city')):
+                print('this does not exist')
+                result[student.get('city')] = []
+                city_list = result[student.get('city')]
+                city_list.append(student.get('name'))
+            else:
+                print('-----------------this exists')
+                city_list = result[student.get('city')]
+                city_list.append(student.get('name'))
+
+        print('------------------')
+    return result
+
+
+print('outside', parse_by_city(students))
