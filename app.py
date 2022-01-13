@@ -269,3 +269,10 @@ move(city="San Francisco", name="Mark", state="California")
 move("John", state="New York", city="New York")
 move("Michael", state="Oregon", city="Portland")
 move("Michael", "San Mateo", "California")
+
+def music(name, genere1, genere2):
+    msg = "{} loves {} and {} music"
+    msg = msg.format(name, genere1, genere2)
+    print(msg)
+
+music("Michael", "Indie", "Pop")
