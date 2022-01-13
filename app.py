@@ -267,4 +267,5 @@ def move(name, city="Seattle", state="Washington"):
 move("Charlie", "Los Angeles", "California")
 move(city="San Francisco", name="Mark", state="California")
 move("John", state="New York", city="New York")
-move("Charlie", state="Oregon", city="Portland")
+move("Michael", state="Oregon", city="Portland")
+move("Michael", "San Mateo", "California")
