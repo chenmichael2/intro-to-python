@@ -1,6 +1,9 @@
 # this is a comment
 # TODO built this function
 
+from unittest import result
+
+
 def add(num, num2):
     '''
     this is suppose to add 2 numbers
@@ -276,3 +279,30 @@ def music(name, genere1, genere2):
     print(msg)
 
 music("Michael", "Indie", "Pop")
+
+def get_cities(students):
+    '''Return a [list] of all cities from the students list'''
+    # TODO Make a empty list
+    # TODO Iterate through the list of student
+    # TODO Apend each city in the dict to the empty list
+    # TODO return the list
+    result = []
+    for s in students:
+        # print(s)
+        if s.get("city"):
+            # print(s.get('city'))
+            result.append(s.get('city'))
+    return result
+
+print('student cities list', get_cities(students))
+
+def get_names(students):
+    names = []
+    for n in students:
+        print(n)
+        if n.get('name'):
+            print(n.get('name'))
+            names.append(n.get('name'))
+    return names
+
+print('name list: ', get_names(students))
